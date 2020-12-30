@@ -6,10 +6,12 @@ from flask_migrate import Migrate  # Flask wrapper for Alembic which is a schema
 app = create_app(os.getenv('FLASK_CONFIG_TYPE') or 'default')
 migrate = Migrate(app, db)  # Initialising Migration
 
+
 # To make some functions already imported using '$ flask shell'
 @app.shell_context_processor
 def make_shell_context():
     return dict(db=db, User=User, Role=Role, Permission=Permission)
+
 
 @app.cli.command()
 def test():
@@ -17,6 +19,7 @@ def test():
     import unittest
     tests = unittest.TestLoader().discover('tests')   # Automatically searches for tests. but an empty __init__.py is needed
     unittest.TextTestRunner(verbosity=2).run(tests)   # Runs it twice
+
 
 '''
 Dont forget to set $ export FLASK_APP=<main_script_name>.py if name is not app.py

@@ -34,6 +34,10 @@ div.post-author {
 div.post-thumbnail {
     position: absolute;
 }
+div.post-title {
+    margin-left: 120px;
+    min-height: 110px;
+}
 div.post-content {
     margin-left: 48px;
     min-height: 48px;
@@ -61,6 +65,9 @@ div.flask-pagedown-preview h2 {
 div.flask-pagedown-preview h3 {
     font-size: 120%;
 }
+div.flask-pagedown-preview img {
+    size: 80%;
+}
 .post-body h1 {
     font-size: 140%;
 }
@@ -69,6 +76,9 @@ div.flask-pagedown-preview h3 {
 }
 .post-body h3 {
     font-size: 120%;
+}
+.post-body img {
+    size: 80%;
 }
 .table.followers tr {
     border-bottom: 1px solid #e0e0e0;

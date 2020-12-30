@@ -1,10 +1,10 @@
 {% extends "bootstrap/base.html" %}
 
-{% block title %}Flasky: {% endblock %}
+{% block title %}Tech Bytes: {% endblock %}
 
 {% block head %}
   {{ super() }} <!-- So that custom css doesn't overwrite bootstrap -->
-  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css', version='2.1') }}">
 {% endblock %}
 
 {% block navbar %}
@@ -18,7 +18,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="{{ url_for('main.index') }}">Flasky</a>
+      <a class="navbar-brand" href="{{ url_for('main.index') }}">Tech Bytes</a>
     </div>
 
     <div class="navbar-collapse collapse">

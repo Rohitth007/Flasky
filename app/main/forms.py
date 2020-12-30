@@ -1,7 +1,7 @@
 from flask_wtf import FlaskForm  # Helps with Cross-Site Request Forgery(CSRF)
 from wtforms import StringField, SubmitField, TextAreaField, BooleanField, SelectField, ValidationError  # These help with easier form validators and checking corner cases
 from wtforms.validators import DataRequired, Length, Regexp, Email  # Check the book Flask Web Development by Miguel Grinberg for more.
-from flask_pagedown.fields import PageDownField  # Python wrapper for paedown that integrates with flask_wtf
+from flask_pagedown.fields import PageDownField  # Python wrapper for pagedown that integrates with flask_wtf
 from ..models import Role, User
 
 
@@ -44,6 +44,7 @@ class EditProfileAdminForm(FlaskForm):
 
 
 class PostForm(FlaskForm):
+    title = StringField('Blog Title', validators=[DataRequired(), Length(1, 45)])
     body = PageDownField("What's on your mind?", validators=[DataRequired()])
     submit = SubmitField('Submit')
 

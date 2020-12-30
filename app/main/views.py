@@ -22,7 +22,7 @@ before checking for authorisation
 def index():
     form = PostForm()
     if form.validate_on_submit() and current_user.can(Permission.WRITE):
-        post = Post(body=form.body.data, author=current_user._get_current_object())
+        post = Post(title=form.title.data, body=form.body.data, author=current_user._get_current_object())
         db.session.add(post)
         db.session.commit()
         return redirect(url_for('.index'))
@@ -180,11 +180,13 @@ def edit(id):
         abort(403)
     form = PostForm()
     if form.validate_on_submit():
+        post.title  = form.title.data
         post.body = form.body.data
         db.session.add(post)
         db.session.commit()
         flash('The post has been updated')
         return redirect(url_for('.post', id=post.id))
+    form.title.data = post.title
     form.body.data = post.body
     return render_template('edit_post.html.j2', form=form)
 

@@ -277,6 +277,7 @@ login_manager.anonymous_user = AnonymousUser  # telling Flask-Login to use our c
 class Post(db.Model):
     __tablename__ = 'posts'
     id = db.Column(db.Integer, primary_key=True)
+    title = db.Column(db.Text)
     body = db.Column(db.Text)
     body_html = db.Column(db.Text)
     timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow)
@@ -286,6 +287,7 @@ class Post(db.Model):
     def to_json(self):
         json_post = {
             'url': url_for('api.get_post', id=self.id),
+            'title': self.title,
             'body': self.body,
             'body_html': self.body_html,
             'timestamp': self.timestamp,

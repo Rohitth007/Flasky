@@ -35,6 +35,7 @@ class TestingConfig(Config):
     TESTING = True
     SQLALCHEMY_DATABASE_URI = os.environ.get('TEST_DATABASE_URL') or \
                                 'sqlite://'  # This runs database in-memory as it is not needed otherwise.
+    SEND_FILE_MAX_AGE_DEFAULT = 0
 
 class ProductionConfig(Config):
     SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') or \
