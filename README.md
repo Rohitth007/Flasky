@@ -5,9 +5,9 @@
 
 > You can also follow your favorite writers to not miss their new blogs.
 
-<img src="/pics/tech_bytes_home.png" width="700"/>
-
-<img src="/pics/tech_bytes_profile.png" width="700"/>
+| Home Page                                           | Profile Page                                          |
+| :-------------------------------------------------  | :---------------------------------------------------- |
+| <img src="/pics/tech_bytes_home.png" width="1000"/> | <img src="/pics/tech_bytes_profile.png" width="1000"/> |
 
 ### Features:
 * Signup and Create interesting profiles, use **_Gravatar_** to make amazing profile pictures.
