@@ -2,7 +2,12 @@
 ## **A Markdown Blogging Platform For All Things Tech**
 
 > You can write your blog in markdown and share it with the world.
+
 > You can also follow your favorite writers to not miss their new blogs.
+
+![home](/pics/tech_bytes_home.png) 
+
+![profile](/pics/tech_bytes_profile.png)
 
 ### Features:
 * Signup and Create interesting profiles, use **_Gravatar_** to make amazing profile pictures.
