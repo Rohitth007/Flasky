@@ -1,11 +1,10 @@
-#**Tech Bytes!**
-##**A Markdown Blogging Platform For All Things Tech**
+# **Tech Bytes!**
+## **A Markdown Blogging Platform For All Things Tech**
 
->You can write your blog in markdown and share it with the world.
+> You can write your blog in markdown and share it with the world.
+> You can also follow your favorite writers to not miss their new blogs.
 
->You can also follow your favorite writers to not miss their new blogs.
-
-###Features:
+### Features:
 * Signup and Create interesting profiles, use **_Gravatar_** to make amazing profile pictures.
 * Write and Edit blogs in **_Markdown_**, get a visual preview of your Markdown.
 * Comment to discuss about your favourite blogs.
@@ -16,7 +15,7 @@
 * Moderator has the ability to censor comments if not appropriate.
 * Admin has all edit permissions.
 
-##**Made in Python**
+## **Made in Python**
 Using: **`import flask`**, **`SQLite3`**, **`SQL Alchemy`**, **`Jinja2`** and **`Bootstrap`**
 
 This is heavily inspired from **Miguel Grinberg**'s book **Flask Web Development**.
