@@ -43,4 +43,5 @@ Demo Video: https://www.youtube.com/watch?v=JeWJCIdw0JE&feature=youtu.be
    * `export MAIL_USERNAME='_eg-username_'` : For sending mails, has to ba gmail account
    * `export MAIL_PASSWORD='_passwd_'` : password for above mail
    * `export TEST_ADMIN='_email_'` : Mail to which admin mails are sent. (not admin of website)
-1. `flask run`
+1. `flask run` : Runs Flask server, press Ctrl+C to stop server.
+1. `deactivate` : To get outside virtual environment.
