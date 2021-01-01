@@ -32,8 +32,15 @@ This is heavily inspired from **Miguel Grinberg**'s book **Flask Web Development
 Demo Video: https://www.youtube.com/watch?v=JeWJCIdw0JE&feature=youtu.be
 
 ## How to Use
-1. `source venv/bin/activate`
-2. `export FLASK_APP=flasky.py`
-3. `export FLASK_DEBUG=1`
-4. `export SECRET_KEY='097h3057gr3uhi3h98624t28uh9'` # Anything
-5. `flask run`
+1. Create a virtual environment using `virtualenv`
+1. `source venv/bin/activate` : To activate virtualenvironment
+1. Install packages from the dev.txt or prod.txt file in the requirements directory using: `pip install -r requirements/dev.txt`
+1. Create the following environment variables:
+   * `export FLASK_APP=flasky.py`
+   * `export FLASK_CONFIG_TYPE=testing` : development(default if not given) or testing or production
+   * `export FLASK_DEBUG=1` : If in dev mode
+   * `export SECRET_KEY='097h30...anyrandom...t28uh9'` : For 
+   * `export MAIL_USERNAME='_eg-username_'` : For sending mails, has to ba gmail account
+   * `export MAIL_PASSWORD='_passwd_'` : password for above mail
+   * `export TEST_ADMIN='_email_'` : Mail to which admin mails are sent. (not admin of website)
+1. `flask run`
